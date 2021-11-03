@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "e448df64-1885-4b32-9e44-8f993fe47786",
+		"name": "notes-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login?email=ahmet@ahmet.com&password=ahmetahmet",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "ahmet@ahmet.com"
+						},
+						{
+							"key": "password",
+							"value": "ahmetahmet"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list notes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjk4MmU1ZTBiZmRhMmVmMjllNjk0NWY1OWE0NGU1YWU2NTE2N2M0OTRkMGQ3N2RiZjg3MmE3ZGEwY2NlZWViNGQ3OTdjMGE2NmVjZTc2OGUiLCJpYXQiOjE2MzU5NzI1MDQsIm5iZiI6MTYzNTk3MjUwNCwiZXhwIjoxNjY3NTA4NTA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kiQMV_EJxaTt5Cy3eSjD0nxYO0YA4qji2q87qIWpPjGA68OrG9kXBya-V0PDG21EE4-euXIV-qjfX64tavc6mL4aca-Gph7q6gWa0XplOFg-7FU-uoXcYcyRhQ3GtIACQhBYU7rvYujWSvaF3IfA4fAex_1Na-_LCB9m_Entwfuzq91vhAjiagD9FH9JQag-j02pWJGYdxjF4fNb52caU7crSr7u5krySprsLWvUJP2tkAEOkg1KTQO8FCFY1g4kwWaoePmjALFLoH2QfY2e6vbnFs4jIIx1MeWb9PiVIDoZFR0K2PGG9GvcBXhvjDOo95TRt6fh5SsPaHMyNAA61_S76U2wPjbAqHOVMve85O_clfjG0c87DumVEk6jS5taYP0cEYMC1BJ-kLq0hxHUTBnni09nUtve5q3Wz93prIVc0tn5wBiT8dw5WWR7jOU4j35JqVoauEFgFVQ9cyxeCzu4aXLPu4PUg4Qs8laDuE3ULm9QdkzCFsw8h-tQ0rMh63q_QgIrXOAsCVUrvxaFNm7-eS7UQrV3LUZ8e_YyFQmoFq_X9QnaiAPdXlaw7ECUHRiZrj1vtJKNJ3tckquXbjrL9JrYQn87qs33QEDXMmnPpSzvYLmDKYYO5M5hxPs0gh-Lw-d2akjCYwHcB8OemK_hNrew9otLDUgLbprvnwc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create note",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjk4MmU1ZTBiZmRhMmVmMjllNjk0NWY1OWE0NGU1YWU2NTE2N2M0OTRkMGQ3N2RiZjg3MmE3ZGEwY2NlZWViNGQ3OTdjMGE2NmVjZTc2OGUiLCJpYXQiOjE2MzU5NzI1MDQsIm5iZiI6MTYzNTk3MjUwNCwiZXhwIjoxNjY3NTA4NTA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kiQMV_EJxaTt5Cy3eSjD0nxYO0YA4qji2q87qIWpPjGA68OrG9kXBya-V0PDG21EE4-euXIV-qjfX64tavc6mL4aca-Gph7q6gWa0XplOFg-7FU-uoXcYcyRhQ3GtIACQhBYU7rvYujWSvaF3IfA4fAex_1Na-_LCB9m_Entwfuzq91vhAjiagD9FH9JQag-j02pWJGYdxjF4fNb52caU7crSr7u5krySprsLWvUJP2tkAEOkg1KTQO8FCFY1g4kwWaoePmjALFLoH2QfY2e6vbnFs4jIIx1MeWb9PiVIDoZFR0K2PGG9GvcBXhvjDOo95TRt6fh5SsPaHMyNAA61_S76U2wPjbAqHOVMve85O_clfjG0c87DumVEk6jS5taYP0cEYMC1BJ-kLq0hxHUTBnni09nUtve5q3Wz93prIVc0tn5wBiT8dw5WWR7jOU4j35JqVoauEFgFVQ9cyxeCzu4aXLPu4PUg4Qs8laDuE3ULm9QdkzCFsw8h-tQ0rMh63q_QgIrXOAsCVUrvxaFNm7-eS7UQrV3LUZ8e_YyFQmoFq_X9QnaiAPdXlaw7ECUHRiZrj1vtJKNJ3tckquXbjrL9JrYQn87qs33QEDXMmnPpSzvYLmDKYYO5M5hxPs0gh-Lw-d2akjCYwHcB8OemK_hNrew9otLDUgLbprvnwc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notes?title=aaaa3&body=bbbb",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "aaaa3"
+						},
+						{
+							"key": "body",
+							"value": "bbbb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view note",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjk4MmU1ZTBiZmRhMmVmMjllNjk0NWY1OWE0NGU1YWU2NTE2N2M0OTRkMGQ3N2RiZjg3MmE3ZGEwY2NlZWViNGQ3OTdjMGE2NmVjZTc2OGUiLCJpYXQiOjE2MzU5NzI1MDQsIm5iZiI6MTYzNTk3MjUwNCwiZXhwIjoxNjY3NTA4NTA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kiQMV_EJxaTt5Cy3eSjD0nxYO0YA4qji2q87qIWpPjGA68OrG9kXBya-V0PDG21EE4-euXIV-qjfX64tavc6mL4aca-Gph7q6gWa0XplOFg-7FU-uoXcYcyRhQ3GtIACQhBYU7rvYujWSvaF3IfA4fAex_1Na-_LCB9m_Entwfuzq91vhAjiagD9FH9JQag-j02pWJGYdxjF4fNb52caU7crSr7u5krySprsLWvUJP2tkAEOkg1KTQO8FCFY1g4kwWaoePmjALFLoH2QfY2e6vbnFs4jIIx1MeWb9PiVIDoZFR0K2PGG9GvcBXhvjDOo95TRt6fh5SsPaHMyNAA61_S76U2wPjbAqHOVMve85O_clfjG0c87DumVEk6jS5taYP0cEYMC1BJ-kLq0hxHUTBnni09nUtve5q3Wz93prIVc0tn5wBiT8dw5WWR7jOU4j35JqVoauEFgFVQ9cyxeCzu4aXLPu4PUg4Qs8laDuE3ULm9QdkzCFsw8h-tQ0rMh63q_QgIrXOAsCVUrvxaFNm7-eS7UQrV3LUZ8e_YyFQmoFq_X9QnaiAPdXlaw7ECUHRiZrj1vtJKNJ3tckquXbjrL9JrYQn87qs33QEDXMmnPpSzvYLmDKYYO5M5hxPs0gh-Lw-d2akjCYwHcB8OemK_hNrew9otLDUgLbprvnwc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notes/6182fad4d4090",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						"6182fad4d4090"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update note",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjk4MmU1ZTBiZmRhMmVmMjllNjk0NWY1OWE0NGU1YWU2NTE2N2M0OTRkMGQ3N2RiZjg3MmE3ZGEwY2NlZWViNGQ3OTdjMGE2NmVjZTc2OGUiLCJpYXQiOjE2MzU5NzI1MDQsIm5iZiI6MTYzNTk3MjUwNCwiZXhwIjoxNjY3NTA4NTA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kiQMV_EJxaTt5Cy3eSjD0nxYO0YA4qji2q87qIWpPjGA68OrG9kXBya-V0PDG21EE4-euXIV-qjfX64tavc6mL4aca-Gph7q6gWa0XplOFg-7FU-uoXcYcyRhQ3GtIACQhBYU7rvYujWSvaF3IfA4fAex_1Na-_LCB9m_Entwfuzq91vhAjiagD9FH9JQag-j02pWJGYdxjF4fNb52caU7crSr7u5krySprsLWvUJP2tkAEOkg1KTQO8FCFY1g4kwWaoePmjALFLoH2QfY2e6vbnFs4jIIx1MeWb9PiVIDoZFR0K2PGG9GvcBXhvjDOo95TRt6fh5SsPaHMyNAA61_S76U2wPjbAqHOVMve85O_clfjG0c87DumVEk6jS5taYP0cEYMC1BJ-kLq0hxHUTBnni09nUtve5q3Wz93prIVc0tn5wBiT8dw5WWR7jOU4j35JqVoauEFgFVQ9cyxeCzu4aXLPu4PUg4Qs8laDuE3ULm9QdkzCFsw8h-tQ0rMh63q_QgIrXOAsCVUrvxaFNm7-eS7UQrV3LUZ8e_YyFQmoFq_X9QnaiAPdXlaw7ECUHRiZrj1vtJKNJ3tckquXbjrL9JrYQn87qs33QEDXMmnPpSzvYLmDKYYO5M5hxPs0gh-Lw-d2akjCYwHcB8OemK_hNrew9otLDUgLbprvnwc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notes/6182fad4d4090?title=nnnnnnnnnnn&body=mmmmmmmmm",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						"6182fad4d4090"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "nnnnnnnnnnn"
+						},
+						{
+							"key": "body",
+							"value": "mmmmmmmmm"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete note",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYjk4MmU1ZTBiZmRhMmVmMjllNjk0NWY1OWE0NGU1YWU2NTE2N2M0OTRkMGQ3N2RiZjg3MmE3ZGEwY2NlZWViNGQ3OTdjMGE2NmVjZTc2OGUiLCJpYXQiOjE2MzU5NzI1MDQsIm5iZiI6MTYzNTk3MjUwNCwiZXhwIjoxNjY3NTA4NTA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kiQMV_EJxaTt5Cy3eSjD0nxYO0YA4qji2q87qIWpPjGA68OrG9kXBya-V0PDG21EE4-euXIV-qjfX64tavc6mL4aca-Gph7q6gWa0XplOFg-7FU-uoXcYcyRhQ3GtIACQhBYU7rvYujWSvaF3IfA4fAex_1Na-_LCB9m_Entwfuzq91vhAjiagD9FH9JQag-j02pWJGYdxjF4fNb52caU7crSr7u5krySprsLWvUJP2tkAEOkg1KTQO8FCFY1g4kwWaoePmjALFLoH2QfY2e6vbnFs4jIIx1MeWb9PiVIDoZFR0K2PGG9GvcBXhvjDOo95TRt6fh5SsPaHMyNAA61_S76U2wPjbAqHOVMve85O_clfjG0c87DumVEk6jS5taYP0cEYMC1BJ-kLq0hxHUTBnni09nUtve5q3Wz93prIVc0tn5wBiT8dw5WWR7jOU4j35JqVoauEFgFVQ9cyxeCzu4aXLPu4PUg4Qs8laDuE3ULm9QdkzCFsw8h-tQ0rMh63q_QgIrXOAsCVUrvxaFNm7-eS7UQrV3LUZ8e_YyFQmoFq_X9QnaiAPdXlaw7ECUHRiZrj1vtJKNJ3tckquXbjrL9JrYQn87qs33QEDXMmnPpSzvYLmDKYYO5M5hxPs0gh-Lw-d2akjCYwHcB8OemK_hNrew9otLDUgLbprvnwc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/notes/6182e5070abfb",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notes",
+						"6182e5070abfb"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

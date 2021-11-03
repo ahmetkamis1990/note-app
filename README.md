@@ -27,3 +27,6 @@ Start the local development server
     php artisan serve
 
 You can now access the server at http://localhost:8000
+
+
+You can find postman collection at /notes-collection.postman_collection.json which includes API calls.You should call login function to get a token which is required for other API functions
