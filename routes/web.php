@@ -13,10 +13,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/', [App\Http\Controllers\NoteController::class, 'index']);
+
+    Route::get('note/create', [App\Http\Controllers\NoteController::class, 'create']);
+    Route::post('note/create', [App\Http\Controllers\NoteController::class, 'store']);
+
+
+    Route::get('note/edit/{accessKey}', [App\Http\Controllers\NoteController::class, 'edit']);
+    Route::patch('note/edit/{accessKey}', [App\Http\Controllers\NoteController::class, 'update']);
+
+    Route::get('note/view/{accessKey}', [App\Http\Controllers\NoteController::class, 'show']);
+
+    Route::get('note/delete/{accessKey}', [App\Http\Controllers\NoteController::class, 'destroy']);
+
+
+
 });
 
-Auth::routes();
+Route::get('shared-note/view/{accessKey}', [App\Http\Controllers\NoteController::class, 'show']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Auth::routes();
