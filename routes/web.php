@@ -20,21 +20,14 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('note/create', [App\Http\Controllers\NoteController::class, 'create']);
     Route::post('note/create', [App\Http\Controllers\NoteController::class, 'store']);
-
-
     Route::get('note/edit/{accessKey}', [App\Http\Controllers\NoteController::class, 'edit']);
     Route::patch('note/edit/{accessKey}', [App\Http\Controllers\NoteController::class, 'update']);
-
     Route::get('note/view/{accessKey}', [App\Http\Controllers\NoteController::class, 'show']);
-
     Route::get('note/delete/{accessKey}', [App\Http\Controllers\NoteController::class, 'destroy']);
-
 
 
 });
 
 Route::get('shared-note/view/{accessKey}', [App\Http\Controllers\NoteController::class, 'show']);
-
-
 
 Auth::routes();
